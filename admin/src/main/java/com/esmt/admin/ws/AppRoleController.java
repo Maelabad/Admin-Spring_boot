@@ -17,11 +17,19 @@ public class AppRoleController {
     @PostMapping(path = "/save")
     public AppRoleEntity save(@RequestBody AppRoleEntity appRoleEntity){
         return appRoleRepository.save(appRoleEntity);
+
     }
 
     @GetMapping(path = "/all")
     public List<AppRoleEntity> getAll(){
         return appRoleRepository.findAll();
     }
+
+    @GetMapping(path = "/findById")
+    public AppRoleEntity get(@RequestParam int id){
+        return appRoleRepository.findById(id);
+    }
+
+
 
 }

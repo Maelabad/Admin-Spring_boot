@@ -21,7 +21,7 @@ public class AppRoleEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id ;
 
-    @Column(length = 150, nullable = false) // Taille et not null
+    @Column(length = 150, nullable = false)
     private String name;
 
 }
